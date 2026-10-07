@@ -89,10 +89,10 @@ export const work = [
     date: 'Oct 2026 — Present', sub: 'Full-time', current: true,
     title: 'Associate UI Engineer', org: 'ERA-InfoTech Limited · Dhaka, Bangladesh',
     bullets: [
-      'Building responsive, component-based interfaces with React.js and Tailwind CSS.',
+      'Building responsive, component-based interfaces with React.js, Tailwind CSS, Next.js, and TypeScript.',
       'Turning design files into clean, accessible, pixel-accurate UI.',
       'Connecting frontend views to backend data through REST APIs.',
-      // ✏️ Add one measurable line, e.g. "Built N reusable components"
+      'Exploring modern frontend patterns to improve component architecture and maintainability.',
     ],
   },
 ]
