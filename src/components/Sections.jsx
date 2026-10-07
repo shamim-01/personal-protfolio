@@ -13,15 +13,26 @@ export function Snapshot() {
     <section id="stat-section" className="py-22">
       <div className={W}>
         <SectionHead tag="where I'm at, currently" right="updated as things change" title="A quick snapshot." />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <Card className="sm:col-span-2">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-2">
+          <Card className="sm:col-span-2 lg:col-span-2">
             <p className="mb-3.5 font-mono text-xs text-muted">building</p>
             <p className="font-serif text-[22px] leading-[1.3]">Crafting polished, responsive interfaces with React and growing my skills in Next.js, while using SQL, Python and Power BI to turn data into actionable insights.</p>
           </Card>
-          <Card className="flex flex-col justify-between">
-            <p className="mb-3.5 font-mono text-xs text-muted">my time</p>
-            <div className="font-mono text-[38px] text-lime">{time}</div>
-            <div className="mt-1.5 font-mono text-[12.5px] text-muted">Dhaka, Bangladesh</div>
+          <Card className="flex flex-col justify-center">
+            <div className="mb-3.5 flex items-center justify-between gap-3">
+              <p className="m-0 font-mono text-xs text-muted">my time</p>
+              <span className="font-mono text-[12.5px] text-muted">Dhaka, Bangladesh</span>
+            </div>
+            <div className="flex items-center justify-between gap-3">
+              <div className="font-mono text-[38px] leading-none text-lime">{time}</div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-line px-2.5 py-1 font-mono text-[11px] text-muted">
+                <span className="size-1.5 rounded-full bg-lime" />
+                UTC+6
+              </span>
+            </div>
+            <p className="mt-4 max-w-[24ch] font-serif text-sm italic text-muted">
+              “Make time for what moves you forward.”
+            </p>
           </Card>
           <Card>
             <p className="mb-3.5 font-mono text-xs text-muted">what I reach for</p>
@@ -34,7 +45,7 @@ export function Snapshot() {
               ))}
             </ul>
           </Card>
-          <Card className="grid grid-cols-2 gap-5 sm:col-span-2 lg:col-span-3 lg:grid-cols-4">
+          <Card className="grid grid-cols-2 gap-3 sm:col-span-2 lg:col-span-2 lg:grid-cols-4">
             {stats.map((s) => (
               <div key={s.label}>
                 <CountUp n={s.n} suffix={s.suffix} />
